@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+#SearchBar{
+
+    background-image: linear-gradient(rgba(0,0,0, .5),rgba(0,0,0, .5)),url("/src/image/book_img.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Poppins;
+  
+
+}
+#SearchBar h3{
+    color: white;
+    font-size: 35px;
+}
+#SearchBar label{
+    color: white;
+    margin: auto 5px;
+}
+#SearchBar select{
+    height: 30px;
+    outline: none;
+}
+.container{
+    z-index: 2;
+}
+
+#inputSearch{
+    height: 40px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#inputSearch input, button{
+    padding-left: 10px;
+    height: 100%;
+    outline: none;
+}
+#BookList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#Book{
+    margin: 25px 15px;
+
+}
+#Book .card{
+        background-color: rgb(245, 245, 245);
+}
+#Book .card-img-top{
+    box-shadow: rgb(110, 107, 107) 4px 5px 8px 1px;
+}

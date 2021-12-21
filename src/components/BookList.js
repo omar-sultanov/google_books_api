@@ -1,8 +1,16 @@
 import React,{useState,useEffect} from 'react'
-import Book from './Book'
+import Book from './Book';
+import Edit from './Edit';
 import axios from 'axios'
 import { connect } from 'react-redux';
-
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Routes,
+    useParams,
+    Link
+  } from "react-router-dom";
 const  BookList = (props) => {
     //AIzaSyDMiP4Ietq5zmLXBdbcdRM2iQWTPhoH1g4
     //booklist-327906
@@ -22,7 +30,22 @@ const  BookList = (props) => {
 
     return (
         <div id="BookList">
-            <Book infoOfBook={books}/>    
+            <Switch>
+                                  <Route exact path="/edit/:id"  render={() => 
+                      (
+                          <div>
+                              <Edit editBook={books}/> 
+                          </div>
+                      )}/>
+                      <Route path="/" render={() => 
+                      (
+                          <div>
+                              <Book infoOfBook={books}/> 
+                          </div>
+                      )}/>
+
+                </Switch>
+                     
         </div>
     )
 }
@@ -31,6 +54,7 @@ const mapStateToProps=state=>{
         searchSubmitValue:state.searchSubmitValue,
         selectCategoriesValue:state.selectCategoriesValue,
         selectSortingValue:state.selectSortingValue,
+  
     }
 }
 

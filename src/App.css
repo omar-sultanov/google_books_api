@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+.App{
+    width: 100%;
+}
 #SearchBar{
 
     background-image: linear-gradient(rgba(0,0,0, .5),rgba(0,0,0, .5)),url("/src/image/book_img.jpg");
@@ -40,8 +43,10 @@
 }
 #BookList{
     display: flex;
-    justify-content: center;
+    flex-direction:row;
     flex-wrap: wrap;
+    width: 100%;
+    border: solid red 1px;
 }
 #Book{
     margin: 25px 15px;
@@ -53,3 +58,12 @@
 #Book .card-img-top{
     box-shadow: rgb(110, 107, 107) 4px 5px 8px 1px;
 }
+ /* #rigthPart,#leftPart{
+ width: 100%;
+    border: solid red 1px;
+}
+ #parentPart{
+width: 100%;
+display: flex;
+margin: 0;
+    border: solid  1px blue; */
